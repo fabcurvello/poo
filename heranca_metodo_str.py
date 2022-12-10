@@ -28,6 +28,9 @@ class Pessoa:
     def email(self, email):
         self._email = email
 
+    def __str__(self):
+        return f"{self._matricula}: \nNome: {self._nome} \nE-mail: {self.email}"
+
 
 # Aluno é subclasse de Pessoa
 class Aluno(Pessoa):
@@ -52,6 +55,9 @@ class Aluno(Pessoa):
     def turma(self, turma):
         self._turma = turma
 
+    def __str__(self):
+        return f"\nDADOS DO(A) ALUNO(A) {super().__str__()} \nCurso: {self._curso} \nTurma: {self._turma}"
+
 
 # Professor é subclasse de Pessoa
 class Professor(Pessoa):
@@ -67,19 +73,13 @@ class Professor(Pessoa):
     def formacao(self, formacao):
         self._formacao = formacao
 
+    def __str__(self):
+        return f"\nDADOS DO(A) PROFESSOR(A) {super().__str__()} \nFormação: {self.formacao}"
+
 
 
 alu1 = Aluno(301, "Carla Moreira", "carla@email.com", "Inglês", "N102")
 prof1 = Professor(27, "Maria Cristina", "cristina@email.com", "Letras")
 
-print(f"\nDADOS DO(A) ALUNO(A) {alu1.matricula}:")
-print(f"Nome: {alu1.nome}")
-print(f"E-mail: {alu1.email}")
-print(f"Curso: {alu1.curso}")
-print(f"Turma: {alu1.turma}")
-
-print(f"\nDADOS DO(A) PROFESSOR(A) {prof1.matricula}:")
-print(f"Nome: {prof1.nome}")
-print(f"E-mail: {prof1.email}")
-print(f"Formação: {prof1.formacao}")
-
+print(alu1)
+print(prof1)
