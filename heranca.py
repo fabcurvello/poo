@@ -29,6 +29,16 @@ class Pessoa:
         self._email = email
 
 
+    def _fazer_login(self):
+        print("-- FAÇA O LOGIN PARA ENTRAR NO SISTEMA --")
+        email = input("E-mail: ")
+        if(email == self._email):
+            print(f"Olá {self._nome}! Login realizado com sucesso!")
+            return True
+        else:
+            print("Falha na tentativa de fazer login...")
+            return False
+
 # Aluno é subclasse de Pessoa
 class Aluno(Pessoa):
     def __init__(self, matricula, nome, email, curso, turma):
@@ -83,3 +93,26 @@ print(f"Nome: {prof1.nome}")
 print(f"E-mail: {prof1.email}")
 print(f"Formação: {prof1.formacao}")
 
+
+
+'''
+Experimento para identificar um usuário cadastrado
+'''
+
+#Dicionário onde a chave é a matrícula e o valor é o objeto inteiro
+usuarios = {alu1.matricula : alu1, prof1.matricula : prof1}
+def identificar_usuario(dic_usuarios):
+    print("\n-- IDENTIFICAÇÃO DO USUÁRIO --")
+    matricula = int(input("Informe o número de sua matrícula:"))
+    if (matricula in dic_usuarios):
+        usuario_identificado = dic_usuarios[matricula]
+        print(f"Usuário localizado: {usuario_identificado.nome}")
+        #pelo usuário identificado, chamar método fazer_login() que está na classe Pessoa. Este método retorna um boolean
+        logado = usuario_identificado._fazer_login()
+        print(logado)
+    else:
+        print("Matrícula não existe!")
+
+
+
+identificar_usuario(usuarios)
