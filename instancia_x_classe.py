@@ -9,14 +9,16 @@ class TaxiRio():
         self._modelo = modelo
         self._ano = ano
 
+
+    # Método de instância
+    def exibir_fabricante_modelo(self):
+        print(f"Você está aguardando um Táxi {self._fabricante} {self._modelo}.")
+
+
     #Método de classe
     @classmethod
     def exibir_cor(cls):
         print(f"A cor padrão dos táxis na capital do Rio de Janeiro é {cls.cor}.")
-
-    #Método de instância
-    def exibir_fabricante_modelo(self):
-        print(f"Você está aguardando um Táxi {self._fabricante} {self._modelo}.")
 
 
     #Método estático
@@ -68,16 +70,17 @@ print(taxi1)
 print(taxi2)
 print(taxi3)
 
-# Chamada do método de classe através de instância de objeto
-taxi3.exibir_cor()
-
-# Chamada do método de classe sem utilizar instância alguma
-TaxiRio.exibir_cor()
-
 # Chamadas de método de instância
 taxi1.exibir_fabricante_modelo()
 taxi2.exibir_fabricante_modelo()
 taxi3.exibir_fabricante_modelo()
+
+# Chamada do método de classe através de instância de objeto
+taxi1.exibir_cor()
+
+# Chamada do método de classe sem utilizar instância alguma
+TaxiRio.exibir_cor()
+
 
 # Chamadas de método estático
 TaxiRio.exibir_horario_de_funcionamento()
