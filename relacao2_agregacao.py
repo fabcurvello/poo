@@ -2,7 +2,8 @@
 Relação de Agregação -> Uma classe precisa da outra classe para executar sua ação,
 ou seja, uma classe utiliza a outra como parte de si.
 
-Ex: Classe CarrinhoDeCompras precisa da Classe Produto para funcionar
+Ex: Classe CarrinhoDeCompras precisa da Classe Produto para funcionar.
+Classe Produto independe da Classe CarrinhoDeCompra
 '''
 
 class CarrinhoDeCompras:
@@ -18,7 +19,7 @@ class CarrinhoDeCompras:
             for produto in self.produtos:
                 print(f" - {produto.nome}: R$ {produto.preco}")
         else:
-            print("Seu carrinho de compras está vazio!")
+            print("Seu carrinho de compras existe, mas está vazio!")
 
 class Produto:
     def __init__(self, nome, preco):
