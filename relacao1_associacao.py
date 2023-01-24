@@ -1,6 +1,8 @@
 '''
 Relação de Associação -> É uma das relações mais comuns entre dois objetos.
 Acontece quando um objeto “utiliza” outro, porém, sem que eles dependam um do outro.
+
+Ex: Objeto trem x objeto trilho, Objeto carro x objeto rua, Objeto aluno x Objeto Curso.
 '''
 
 class Pessoa:
