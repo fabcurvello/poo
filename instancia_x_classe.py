@@ -1,4 +1,4 @@
-class TaxiRio():
+class TaxiRio:
 
     #Atributo de classe
     cor = "Amarelo"
