@@ -1,11 +1,11 @@
 '''
-Relação de Composição -> A classe principal (todo)
+Relação de Composição -> A classe principal (t odo)
 cria uma instância da outra classe (parte),
 que se torna parte dela. Quando a classe principal for destruída,
 sua instância da outra classe também será.
 '''
 
-class Usuario: #todo
+class Usuario: #t odo
     def __init__(self, nome):
         self.nome = nome
         self.telefones = []
