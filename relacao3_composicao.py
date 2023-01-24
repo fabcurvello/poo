@@ -22,6 +22,8 @@ class Usuario: #t odo
         else:
             print(f"\nUsuário(a) {self.nome} - Não possui telefone cadastrado.")
 
+    #def __del__(self):
+    #    print(f"Usuário(a) {self.nome} removido!")
 
 
 class Telefone: #parte
@@ -32,6 +34,9 @@ class Telefone: #parte
 
     def __str__(self):
         return f"- Telefone {self.categorizacao}: ({self.ddd}) {self.numero}"
+
+    #def __del__(self):
+    #    print(f"Telefone {self.categorizacao} removido!")
 
 
 usuario1 = Usuario("Matheus")
