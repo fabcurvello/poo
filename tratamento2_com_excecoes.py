@@ -1,7 +1,7 @@
 nomes = ["Carlos", "Matheus", "Maria", "Jéssica", "Ana"]
 
 try: #tentar
-    numero = int(input("Informe um número para que seja exibido o nome corrspondente na lista:"))
+    numero = int(input("Informe um número para que seja exibido o nome correspondente na lista:"))
     print(f"Nome encontrado na posição {numero} da lista: {nomes[numero]}")
 
 except IndexError as erro: #exceto

@@ -1,6 +1,6 @@
 nomes = ["Carlos", "Matheus", "Maria", "Jéssica", "Ana"]
 
-numero = int(input("Informe um número para que seja exibido o nome corrspondente na lista:"))
+numero = int(input("Informe um número para que seja exibido o nome correspondente da lista:"))
 
 print(f"Nome encontrado na posição {numero} da lista: {nomes[numero]}")
 
